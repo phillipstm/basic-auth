@@ -47,7 +47,7 @@ const UsersModel = sequelizeDatabase.define('Users', {
   },
 });
 
-// Attach beforeCreate Hook to the UserModel.  
+// Attach beforeCreate Hook to the UserModel.Via direct method.  
 UsersModel.beforeCreate((user) => {
   console.log('our user', user);
 });

@@ -16,9 +16,9 @@ afterAll(async () => {
 });
 
 DESCRIBE('Auth Tests', () => {
-    TextDecoderStream('allows a user to signup with a Post to /signup' async () => {
+    test('allows a user to signup with a Post to /signup', async () => {
         //create mockResponse
-        let response = await (await mockRequest.post('/signup')).setEncoding({
+        let response = await mockRequest.post('/signup').send({
             username: 'test',
             password: 'pass',
         });
